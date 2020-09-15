@@ -12,6 +12,7 @@ def test_hello(app):
 def test_it_can_return_all_celestial_bodies(app):
   mercury = CelestialBodies(name='Mercury',
                     image='https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg',
+                    background_image='https://www.howitworksdaily.com/wp-content/uploads/2138184.jpg',
                     celestial_body_type='Planet',
                     gravity=0.37,
                     planet_day=58.65,
@@ -19,6 +20,7 @@ def test_it_can_return_all_celestial_bodies(app):
 
   venus = CelestialBodies(name='Venus',
                     image="https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
+                    background_image='https://media.wired.com/photos/5932ec76d80dd005b42b0a0e/191:100/pass/VENUS_HQ_MOSAIC_enhanced_cropped.png',
                     celestial_body_type='Planet',
                     gravity=0.90,
                     planet_day=243.02,
@@ -40,4 +42,3 @@ def test_it_can_return_all_celestial_bodies(app):
   assert (data['data'][0]['planet_day']) == mercury.planet_day
   assert (data['data'][0]['planet_year']) == mercury.planet_year
   assert (data['data'][0]['travel']) == mercury.travel_time()
-
