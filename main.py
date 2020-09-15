@@ -21,7 +21,7 @@ def get_one_body(id):
         if celestial_body is not None:
           return jsonify(celestial_body.serialize())
         else:
-          return jsonify({'Errors': 'No object found with id: {id}.'}), 404
+          return jsonify({'errors': f'No object found with id: {id}.'}), 404
     except Exception as e:
         return(str(e))
 
