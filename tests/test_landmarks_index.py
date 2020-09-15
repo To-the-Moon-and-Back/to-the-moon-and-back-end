@@ -39,7 +39,7 @@ def test_it_can_return_all_landmarks_a_celestial_body(app):
   assert (data['data'][0]['description']) == caloris.description
   assert (data['data'][0]['celestial_body_id']) == caloris.celestial_body_id
 
-def test_it_can_return_proper_sad_path_and_status_when_no_landmarks_exist(app):
+def test_it_can_return_empty_array_when_no_landmarks_exist(app):
   mercury = CelestialBodies(name='Mercury',
                     image='https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg',
                     celestial_body_type='Planet',
@@ -53,11 +53,11 @@ def test_it_can_return_proper_sad_path_and_status_when_no_landmarks_exist(app):
   resp = client.get('/api/v1/celestial_bodies/1/landmarks')
   data = json.loads(resp.data.decode())
   assert resp.status_code == 200
-  assert (data['data']) == 'No landmarks found for celestial_body id: 1.'
+  assert (data['data']) == []
 
 def test_it_returns_404_when_no_celestial_body(app):
   client = app.test_client()
   resp = client.get('/api/v1/celestial_bodies/4/landmarks')
   data = json.loads(resp.data.decode())
   assert resp.status_code == 404
-  assert (data['errors']) == 'No celestial_body with id: 1'
+  assert (data['errors']) == 'No celestial body with id: 4.'

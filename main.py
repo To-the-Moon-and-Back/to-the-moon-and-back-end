@@ -40,13 +40,10 @@ def get_api():
 def get_landmarks(id):
     try:
         landmarks = Landmark.query.filter(Landmark.celestial_body_id == id)
-        if not landmarks:
-          if CelestialBodies.query.get(id) is not None:
-            return jsonify({'data': f'No landmarks found for celestial_body id: {id}.'})
-          else:
-            return jsonify({'errors': f'No celestial object with id: {id}.'}), 404
-        else:
+        if CelestialBodies.query.get(id) is not None:
           return jsonify({'data': [e.serialize() for e in landmarks]})
+        else:
+          return jsonify({'errors': f'No celestial body with id: {id}.'}), 404
     except Exception as e:
         return(str(e))
 
