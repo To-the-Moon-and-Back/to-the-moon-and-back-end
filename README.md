@@ -14,46 +14,33 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
 {
   "data": [
     {
-    "celestial_body_type": "Planet",
-    "gravity": 0.37,
-    "id": 1,
-    "image": "https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg",
-    "name": "Mercury",
-    "planet_day": 58.65,
-    "planet_year": 87.96,
-    "travel": {
-        "distance": 112788522.23136441,
-        "travel_time": 4544.992030599791
+      "background_image": "https://www.howitworksdaily.com/wp-content/uploads/2138184.jpg",
+      "celestial_body_type": "Planet",
+      "gravity": 0.37,
+      "id": 1,
+      "image": "https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg",
+      "name": "Mercury",
+      "planet_day": 58.65,
+      "planet_year": 87.96,
+      "travel": {
+        "distance": 112489102.86226624,
+        "travel_time": 4532.926453186099
       }
     },
     {
+      "background_image": "https://media.wired.com/photos/5932ec76d80dd005b42b0a0e/191:100/pass/VENUS_HQ_MOSAIC_enhanced_cropped.png",
       "celestial_body_type": "Planet",
       "gravity": 0.9,
       "id": 2,
-      "image": "https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
+      "image": "https://static.scientificamerican.com/sciam/cache/file/F7E0BB0E-3F76-4AF5-92AC0951C2976728_source.jpg?w=590&h=800&DFEBF998-B3D7-484E-B66A7290DF06386E",
       "name": "Venus",
       "planet_day": 243.02,
       "planet_year": 224.7,
       "travel": {
-          "distance": 89615403.36369385,
-          "travel_time": 3611.194526261035
-        }
-      },
-    {
-    "celestial_body_type": "Planet",
-    "gravity": 0.38,
-    "id": 3,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSY5oCXASYgKXI1MFGmRbgs9WmSnULsnOe_fg&usqp=CAU",
-    "name": "Mars",
-    "planet_day": 1.02,
-    "planet_year": 686.98,
-    "travel": {
-        "distance": 41416978.76680374,
-        "travel_time": 1668.9627162638517
+        "distance": 89808499.65593763,
+        "travel_time": 3618.975646999421
       }
-    }, ... 
-  ]
-}
+},...
 ```
 
 ### Celestial Bodies Show Endpoint
@@ -63,17 +50,18 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
 
 ```json
 {
-    "celestial_body_type": "Star",
-    "gravity": 27.95,
-    "id": 9,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkKZ8nFulIMZAK8MKI8kzvsfGnaa3YlqMMRA&usqp=CAU",
-    "name": "Sun",
-    "planet_day": 25.38,
-    "planet_year": null,
-    "travel": {
-        "distance": 93464281.86764629,
-        "travel_time": 3766.29117777427
-    }
+  "background_image": "https://cdn.wccftech.com/wp-content/uploads/2016/12/PE_Still.jpg",
+  "celestial_body_type": "Star",
+  "gravity": 27.95,
+  "id": 9,
+  "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkKZ8nFulIMZAK8MKI8kzvsfGnaa3YlqMMRA&usqp=CAU",
+  "name": "Sun",
+  "planet_day": 25.38,
+  "planet_year": null,
+  "travel": {
+    "distance": 93456973.7401057,
+    "travel_time": 3765.9966852073544
+  }
 }
 ```
 ### Landmarks Index Endpoint 
