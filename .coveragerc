@@ -1,0 +1,6 @@
+[run]
+source = .
+omit =./tests/*,./env/*,manage.py,config.py
+
+[report]
+omit = ./env/*,./tests/*
