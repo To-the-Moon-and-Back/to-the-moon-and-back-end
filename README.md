@@ -4,7 +4,8 @@ This is the final project at Turing School of Software and Design in Denver, CO.
 Stack: Python3, Flask, Postgres, Heroku 
 
 # Endpoints 
-
+## Most Recent Space News Endpoint
+### Most Recent Space News Endpoint
 ```GET ‘https://moon-back-end.herokuapp.com/api/v1/news’```
 
 Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com/api/v1/news’```
@@ -30,7 +31,7 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
       "tags": [],
       "title": "Hurricane Sally will bring devastating floods to the Southern United States",
       "url": "https://arstechnica.com/science/2020/09/hurricane-sally-will-bring-devastating-floods-to-the-southern-united-states/"
-  },...
+  },
 
 ```
 ```GET ‘https://moon-back-end.herokuapp.com/api/v1/celestial_bodies/(id)’```
