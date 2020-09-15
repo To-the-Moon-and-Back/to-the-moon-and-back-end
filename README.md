@@ -27,18 +27,18 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
       }
     },
     {
-    "celestial_body_type": "Planet",
-    "gravity": 0.9,
-    "id": 2,
-    "image": "https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
-    "name": "Venus",
-    "planet_day": 243.02,
-    "planet_year": 224.7,
-    "travel": {
-        "distance": 89615403.36369385,
-        "travel_time": 3611.194526261035
-      }
-    },
+      "celestial_body_type": "Planet",
+      "gravity": 0.9,
+      "id": 2,
+      "image": "https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
+      "name": "Venus",
+      "planet_day": 243.02,
+      "planet_year": 224.7,
+      "travel": {
+          "distance": 89615403.36369385,
+          "travel_time": 3611.194526261035
+        }
+      },
     {
     "celestial_body_type": "Planet",
     "gravity": 0.38,
@@ -51,85 +51,7 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
         "distance": 41416978.76680374,
         "travel_time": 1668.9627162638517
       }
-    },
-    {
-    "celestial_body_type": "Planet",
-    "gravity": 2.53,
-    "id": 4,
-    "image": "https://3.bp.blogspot.com/-JzB2ruOjBOs/WJy8tR_tJSI/AAAAAAAABdA/26gANOQ4Y4IZyMnEGS2L8X-dvhVhGL0ZQCLcB/s1600/jupiter_HD.jpg",
-    "name": "Jupiter",
-    "planet_day": 0.41,
-    "planet_year": 4332.59,
-    "travel": {
-        "distance": 431324606.1620057,
-        "travel_time": 17380.90772735355
-      }
-    },
-    {
-    "celestial_body_type": "Planet",
-    "gravity": 1.06,
-    "id": 5,
-    "image": "https://solarsystem.nasa.gov/system/resources/list_images/2490_hubblesaturn_320.png",
-    "name": "Saturn",
-    "planet_day": 0.44,
-    "planet_year": 10759.22,
-    "travel": {
-        "distance": 878319056.9760253,
-        "travel_time": 35393.256647970076
-      }
-    },
-    {
-    "celestial_body_type": "Planet",
-    "gravity": 0.9,
-    "id": 6,
-    "image": "https://i2-prod.mirror.co.uk/science/article11370299.ece/ALTERNATES/s615/1_Uranus.jpg",
-    "name": "Uranus",
-    "planet_day": 0.72,
-    "planet_year": 30685.4,
-    "travel": {
-        "distance": 1773240469.5898645,
-        "travel_time": 71455.53149540073
-      }
-    },
-    {
-    "celestial_body_type": "Planet",
-    "gravity": 1.14,
-    "id": 7,
-    "image": "https://media.wired.com/photos/5d04045bde1abfe4e801d054/191:100/w_2292,h_1200,c_limit/Science-Neptune-FA-PIA01492_orig.jpg",
-    "name": "Neptune",
-    "planet_day": 0.67,
-    "planet_year": 60189,
-    "travel": {
-        "distance": 2686981881.527914,
-        "travel_time": 108276.18800483213
-      }
-    },
-    {
-    "celestial_body_type": "Moon",
-    "gravity": 0.16,
-    "id": 8,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSA0QNeR2YGmCWvRtZqsYN9Ft44WxYJEArbtw&usqp=CAU",
-    "name": "Moon",
-    "planet_day": 27.32,
-    "planet_year": null,
-    "travel": {
-        "distance": 238900,
-        "travel_time": 9.62685364281109
-      }
-    },
-    {
-    "celestial_body_type": "Star",
-    "gravity": 27.95,
-    "id": 9,
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkKZ8nFulIMZAK8MKI8kzvsfGnaa3YlqMMRA&usqp=CAU",
-    "name": "Sun",
-    "planet_day": 25.38,
-    "planet_year": null,
-    "travel": {
-        "distance": 93464107.60204296,
-        "travel_time": 3766.2841554659476
-      }
-    }
+    }, ... 
   ]
 }
 ```
@@ -186,23 +108,7 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
           "image": "https://media.wired.com/photos/5e62e4af2ee19f000853234b/master/w_1600%2Cc_limit/photo_space_corona_1_AFRC2017-0233-006.jpg",
           "landmark_type": "Atmosphere",
           "name": "Corona"
-      },
-      {
-          "celestial_body_id": 9,
-          "description": "Sun spots happen when fluctuations in the sun cause areas of the surface to be not as hot as their surroundings, causing that area to look darker than the rest of the sun. Despite only appearing as spots, they can grow to a size several times our own planet's! They can last anywhere from a few days to a few months, and tend to increase and decrease in frequency based off of eleven-year cycles.",
-          "id": 4,
-          "image": "https://upload.wikimedia.org/wikipedia/commons/6/67/Sunspots_1302_Sep_2011_by_NASA.jpg",
-          "landmark_type": "Surface",
-          "name": "Sunspots"
-      },
-      {
-          "celestial_body_id": 9,
-          "description": "Solar flares are bright flashes caused by increased activity from the sun, in conjunction with a coronal mass ejection - an intense wave of energized particles that erupt from the sun and fly out into the solar system. While they are relatively common, they can cause electrical problems should the Earth be in the path of a flare, thanks to the disturbances they can cause in the atmosphere.",
-          "id": 5,
-          "image": "https://media1.s-nbcnews.com/j/newscms/2017_23/2030061/170608-solar-flare-mn-0850_be3b4f10ba85b1f4ef86e87522e6b26a.fit-2000w.jpg",
-          "landmark_type": "Atmosphere",
-          "name": "Solar Flares"
-      }
+      }, ... 
   ]
 }
 ```
