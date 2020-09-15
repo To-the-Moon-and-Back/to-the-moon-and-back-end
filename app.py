@@ -75,7 +75,7 @@ def db_seed():
                      planet_year=87.96)
 
     venus = CelestialBodies(name='Venus',
-                     image="https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
+                     image="https://static.scientificamerican.com/sciam/cache/file/F7E0BB0E-3F76-4AF5-92AC0951C2976728_source.jpg?w=590&h=800&DFEBF998-B3D7-484E-B66A7290DF06386E",
                      celestial_body_type='Planet',
                      gravity=0.90,
                      planet_day=243.02,
@@ -103,7 +103,7 @@ def db_seed():
                      planet_year=10759.22)
 
     uranus = CelestialBodies(name='Uranus',
-                     image='https://i2-prod.mirror.co.uk/science/article11370299.ece/ALTERNATES/s615/1_Uranus.jpg',
+                     image='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia18182-uranus-voyager1.png',
                      celestial_body_type='Planet',
                      gravity=0.90,
                      planet_day=0.72,
@@ -354,6 +354,54 @@ def seed_landmark():
                        description="Third largest and furthest out of the major moons of Saturn, Iapetus has a couple of striking features of note. First is the equatorial ridge that runs most of the way around the moon, giving it a sort of walnut shape. The other is that it has two distinctive sides - one a bright, reflective white, and the other a dark reddish-brown, which causes it to be more visible from one side of Saturn than the other.",
                        celestial_body_id=5)
 
+    axis = Landmark(name="Axis",
+                    image="https://i.ytimg.com/vi/chmr7v5R5fo/hqdefault.jpg",
+                    landmark_type="Structure",
+                    description="While most planets spin around themselves vertically - or at the very least only a slight tilt, Uranus is an oddball in the sense that it rotates more or less on its side, having an axial tilt of 97 degrees. This means that the two poles alternate between facing the sun - and given the length of the Uranian year, the day-night cycles for the poles last over 40 Earth years.",
+                    celestial_body_id=6)
+
+    miranda = Landmark(name="Miranda",
+                       image="https://cdn.britannica.com/32/78232-050-8CCA6A1E/innermost-moons-Miranda-Uranus-mosaic-images-Voyager-Jan-24-1986.jpg",
+                       landmark_type="Moon",
+                       description="The smallest of Uranus' five major moons, Miranda is perhaps the most intriguing because of its unique topography - rather than a round sphere, it is has jagged and broken terrain. Among these features lies the largest cliff in the Solar System - a scarp called Verona Rupes, 12 miles from top to bottom. Its low gravity, however, means that it'd take roughly 12 minutes for you to actually fall off of it, and might still be survivable with enough impact cushioning.",
+                       celestial_body_id=6)
+
+    umbriel = Landmark(name="Umbriel",
+                       image="https://upload.wikimedia.org/wikipedia/commons/2/2f/PIA00040_Umbrielx2.47.jpg",
+                       landmark_type="Moon",
+                       description="Named for a shadowy fairy from the literature of Alexander Pope, Umbriel is the third largest of Uranus' moons, but also the darkest. There is, however, a crater on the moon, named Wunda, that has left behind a ring of bright material that stands out on the duskier surface. It lies on the moon's equator - though because all of Uranus' moons share the planet's odd axial tilt, it appears in the Voyager 2 images as if it were on the moon's north pole from a casual observation.",
+                       celestial_body_id=6)
+
+    oberon_titania = Landmark(name="Oberon and Titania",
+                              image="https://static.tvtropes.org/pmwiki/pub/images/titania_and_oberon.jpg",
+                              landmark_type="Moon",
+                              description="The largest of Uranus' moons, Oberon and Titania were discovered shortly after the planet itself in 1787, by the same William Herschel who had found the planet in the first place. As the first planet not known to antiquity, naming the planet was something of an unexplored avenue. It was originally named after the British King George, before Uranus was proposed a year later. The nod to its British discoverer would be retained in its moons - they're all characters from English literature, Oberon and Titania being the king and queen of fairies from Shakespeare's Midsummer Night's Dream.",
+                              celestial_body_id=6)
+
+    great_dark_spot = Landmark(name="Great Dark Spot",
+                               image="https://apod.nasa.gov/apod/image/nepspot_voyager2_big.gif",
+                               landmark_type="Atmosphere",
+                               description="The Great Dark Spot was first discovered in 1989, when Voyager 2 was approaching the planet for a fly-by. Though similar to the Great Red Spot on Jupiter, the storm was smaller - though still roughly Earth sized - and much fiercer, with the highest winds in the Solar System - 1300 miles per hour. In 1994, when observed by Hubble, however, the storm had disappeared. Since then, it's become known that these storms are transient - lasting years, but not permanently. They are however, frequent - an observation in 2016 showed a new one had formed, and has remained in latest observations.",
+                               celestial_body_id=7)
+
+    triton = Landmark(name="Triton",
+                      image="https://scx2.b-cdn.net/gfx/news/hires/2019/neptunesmoon.jpg",
+                      landmark_type="Moon",
+                      description="Triton is the by far the largest of Neptune's moons, accounting for a full 99.7% of all of the mass of all of the moons around the planet, and the seventh largest in the entire Solar System behind the Galileans, Titan and our own. It is also unique in that it was originally an object in the outer Solar System, like Pluto, before being captured by Neptune to become a moon. This event may have destroyed some of the moons already around Neptune, giving the planet its faint rings.",
+                      celestial_body_id=7)
+
+    other_moons = Landmark(name="Other Moons of Neptune",
+                           image="https://upload.wikimedia.org/wikipedia/commons/8/83/Proteus_%28Voyager_2%29.jpg",
+                           landmark_type="Moon",
+                           description="Because of Neptune's distance, and their relatively small size, there has been extremely limited direct observation on the rest of the moons of Neptune. The only probe to pass through the system was Voyager 2 back in 1989 and did not approach any of the small moons close enough for many detailed images. There's still a lot we can detect from afar, however. Proteus, the second largest, for example, was likely amalgamated from debris caused by Triton's capture. Nereid, the third largest, was thrown into a highly eccentric orbit. They both may have also fragmented at some point, creating the moons Hippocamp and Halimede, respectively.",
+                           celestial_body_id=7)
+
+    trans_neptunian = Landmark(name="Trans-Neptunian Objects",
+                               image="https://www.nasa.gov/sites/default/files/thumbnails/image/edu_what_is_pluto_1.png",
+                               landmark_type="Orbital",
+                               description="As the furthest major planet from the sun, Neptune has a large influence on the orbits of the objects within the Kuiper Belt. Astronomers have begun categorizing them by the type of orbital resonance they have with Neptune. The most famous of these is Pluto, the largest Trans-Neptunian Object (TNO) found so far, and the defining example of what have come to be known as Plutinos, which have a 2:3 resonance with Neptune (that is, they revolve twice for every 3 times Neptune does), but there are countless different types - some of the more common are 3:5, 4:7 and 1:2 (the last of which have been nicknamed twotinos)",
+                               celestial_body_id=7)
+
     db.session.add(solar_core)
     db.session.add(photosphere)
     db.session.add(corona)
@@ -371,6 +419,7 @@ def seed_landmark():
     db.session.add(maat)
     db.session.add(sea_tranquility)
     db.session.add(tycho)
+    db.session.add(aitken)
     db.session.add(oceanus)
     db.session.add(orientale)
     db.session.add(olympus)
@@ -388,5 +437,13 @@ def seed_landmark():
     db.session.add(titan)
     db.session.add(mimas)
     db.session.add(iapetus)
+    db.session.add(axis)
+    db.session.add(miranda)
+    db.session.add(umbriel)
+    db.session.add(oberon_titania)
+    db.session.add(great_dark_spot)
+    db.session.add(triton)
+    db.session.add(other_moons)
+    db.session.add(trans_neptunian)
     db.session.commit()
     print('Landmarks seeded!')
