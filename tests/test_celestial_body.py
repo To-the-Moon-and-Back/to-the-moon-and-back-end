@@ -5,6 +5,7 @@ from app import db
 def test_it_can_return_one_celestial_body(app):
   mercury = CelestialBodies(name='Mercury',
                     image='https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg',
+                    background_image='https://www.howitworksdaily.com/wp-content/uploads/2138184.jpg',
                     celestial_body_type='Planet',
                     gravity=0.37,
                     planet_day=58.65,
@@ -12,6 +13,7 @@ def test_it_can_return_one_celestial_body(app):
 
   venus = CelestialBodies(name='Venus',
                     image="https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
+                    background_image='https://www.VENUShowitworksdaily.com/wp-content/uploads/2138184.jpg',
                     celestial_body_type='Planet',
                     gravity=0.90,
                     planet_day=243.02,
@@ -36,6 +38,7 @@ def test_it_can_return_one_celestial_body(app):
 def test_it_returns_sad_path_when_id_does_not_exist(app):
   mercury = CelestialBodies(name='Mercury',
                     image='https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg',
+                    background_image='https://www.howitworksdaily.com/wp-content/uploads/2138184.jpg',
                     celestial_body_type='Planet',
                     gravity=0.37,
                     planet_day=58.65,

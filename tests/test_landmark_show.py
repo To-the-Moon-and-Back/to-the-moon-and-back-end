@@ -5,6 +5,7 @@ from app import db
 def test_it_can_return_an_individual_landmark(app):
   mercury = CelestialBodies(name='Mercury',
                     image='https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg',
+                    background_image='https://www.howitworksdaily.com/wp-content/uploads/2138184.jpg',
                     celestial_body_type='Planet',
                     gravity=0.37,
                     planet_day=58.65,
