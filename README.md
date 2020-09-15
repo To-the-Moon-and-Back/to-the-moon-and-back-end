@@ -33,6 +33,135 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
   },
 
 ```
+### Celestial Bodies Index Endpoint
+``` GET 'https://moon-back-end.herokuapp.com/api/v1/celestial_bodies'```
+
+Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com/api/v1/celestial_bodies’```
+
+```json
+{
+  "data": [
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 0.37,
+    "id": 1,
+    "image": "https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg",
+    "name": "Mercury",
+    "planet_day": 58.65,
+    "planet_year": 87.96,
+    "travel": {
+        "distance": 112788522.23136441,
+        "travel_time": 4544.992030599791
+      }
+    },
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 0.9,
+    "id": 2,
+    "image": "https://astronomy.com/-/media/Images/News%20and%20Observing/News/2020/04/Venus1__1_.jpg?mw=600",
+    "name": "Venus",
+    "planet_day": 243.02,
+    "planet_year": 224.7,
+    "travel": {
+        "distance": 89615403.36369385,
+        "travel_time": 3611.194526261035
+      }
+    },
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 0.38,
+    "id": 3,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSY5oCXASYgKXI1MFGmRbgs9WmSnULsnOe_fg&usqp=CAU",
+    "name": "Mars",
+    "planet_day": 1.02,
+    "planet_year": 686.98,
+    "travel": {
+        "distance": 41416978.76680374,
+        "travel_time": 1668.9627162638517
+      }
+    },
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 2.53,
+    "id": 4,
+    "image": "https://3.bp.blogspot.com/-JzB2ruOjBOs/WJy8tR_tJSI/AAAAAAAABdA/26gANOQ4Y4IZyMnEGS2L8X-dvhVhGL0ZQCLcB/s1600/jupiter_HD.jpg",
+    "name": "Jupiter",
+    "planet_day": 0.41,
+    "planet_year": 4332.59,
+    "travel": {
+        "distance": 431324606.1620057,
+        "travel_time": 17380.90772735355
+      }
+    },
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 1.06,
+    "id": 5,
+    "image": "https://solarsystem.nasa.gov/system/resources/list_images/2490_hubblesaturn_320.png",
+    "name": "Saturn",
+    "planet_day": 0.44,
+    "planet_year": 10759.22,
+    "travel": {
+        "distance": 878319056.9760253,
+        "travel_time": 35393.256647970076
+      }
+    },
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 0.9,
+    "id": 6,
+    "image": "https://i2-prod.mirror.co.uk/science/article11370299.ece/ALTERNATES/s615/1_Uranus.jpg",
+    "name": "Uranus",
+    "planet_day": 0.72,
+    "planet_year": 30685.4,
+    "travel": {
+        "distance": 1773240469.5898645,
+        "travel_time": 71455.53149540073
+      }
+    },
+    {
+    "celestial_body_type": "Planet",
+    "gravity": 1.14,
+    "id": 7,
+    "image": "https://media.wired.com/photos/5d04045bde1abfe4e801d054/191:100/w_2292,h_1200,c_limit/Science-Neptune-FA-PIA01492_orig.jpg",
+    "name": "Neptune",
+    "planet_day": 0.67,
+    "planet_year": 60189,
+    "travel": {
+        "distance": 2686981881.527914,
+        "travel_time": 108276.18800483213
+      }
+    },
+    {
+    "celestial_body_type": "Moon",
+    "gravity": 0.16,
+    "id": 8,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSA0QNeR2YGmCWvRtZqsYN9Ft44WxYJEArbtw&usqp=CAU",
+    "name": "Moon",
+    "planet_day": 27.32,
+    "planet_year": null,
+    "travel": {
+        "distance": 238900,
+        "travel_time": 9.62685364281109
+      }
+    },
+    {
+    "celestial_body_type": "Star",
+    "gravity": 27.95,
+    "id": 9,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkKZ8nFulIMZAK8MKI8kzvsfGnaa3YlqMMRA&usqp=CAU",
+    "name": "Sun",
+    "planet_day": 25.38,
+    "planet_year": null,
+    "travel": {
+        "distance": 93464107.60204296,
+        "travel_time": 3766.2841554659476
+      }
+    }
+  ]
+}
+```
+
 ### Celestial Bodies Show Endpoint
 ```GET ‘https://moon-back-end.herokuapp.com/api/v1/celestial_bodies/(id)’```
 
