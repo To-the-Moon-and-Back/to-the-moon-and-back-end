@@ -1,16 +1,20 @@
 language: python
 python:
-  - "3.8"
-# command to install dependencies
+- '3.8'
 install:
-  - pip install -r requirements.txt
-# Configure postgres
+- pip install -r requirements.txt
 services:
-  - postgresql
+- postgresql
 before_script:
-  - psql -c 'create database moon_back_test;' -U postgres
-# Set environment variables
+- psql -c 'create database moon_back_test;' -U postgres
 env:
-  - APP_SETTINGS=config.DevelopmentConfig DATABASE_URL=postgresql:///moon_back
-# command to run tests
+- APP_SETTINGS=config.DevelopmentConfig DATABASE_URL=postgresql:///moon_back
 script: python manage.py test
+deploy:
+  provider: heroku
+  api_key:
+    secure: D/Eh569QK/Udv53rNHdvu5cgXHVeS3U0N8hOrEDSCMpzKrQzVNiow4ZzC1sC3ryk4Kq7LZ2WodQRHgsrtca7efvTs/I8nsY7ahlnK7bAZk3Skg8jONdfAmEwH32OepEQFqvoVFEWW+dLZ73VjnAMjaRHfhoUJv6c6cjQ8KjsSddO+nRh1KR9uQqmuPkEnkRXmEkM5QT9uQSlAmYew3/WQNyk+5qIsTSCqaEmRY7zc2h4DMzsbp8DAXXyjf4fMjAQoDfzzCPMBIpjKpRqx333ivjvXEbArOOQK+gt99l6Sjrh37EjR4oB/Ow947rJ0SWoCMe53Ed8SQBlVJSxqXht1eA3xcWOfjC92Cz352fDvUgJOzIdaeQdBrcZ5t4e2+/1ERenWtVwF9BHB0U3+wbLQasGM0SqTnQnfhRDh7QSOqu9qq5hkbJPDucQZLFN94W+1SIVf8C6RxbKOQKeP4lD0PiIi8ZdKGR3XPFk1rGu4q4MVnSiNdM8ibiE6x7IN8kS41mxcQLVUr2qLzxHQ3BCtFxdZRCL3QCDqBQj6Aqp6Y/iUX3ARtAnXnKnjqEYs36f77S2x3oj8dHzkmKafOEdtIvlnB3+56d2n+u9QhNrfNQRUfLGpmGhvhQ0NBRksRLXzSblhEwJWzOR6YimpyNBMh8BQk6ZnrKoTkPnc6oExFM=
+  app: moon-back-end
+  on:
+    repo: To-the-Moon-and-Back/to-the-moon-and-back-end
+  skip_cleanup: 'true'
