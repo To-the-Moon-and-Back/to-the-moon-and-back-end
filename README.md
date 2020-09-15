@@ -4,35 +4,7 @@ This is the final project at Turing School of Software and Design in Denver, CO.
 Stack: Python3, Flask, Postgres, Heroku 
 
 # Endpoints 
-### Most Recent Space News Endpoint
-```GET ‘https://moon-back-end.herokuapp.com/api/v1/news’```
 
-Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com/api/v1/news’```
-
-```json
-{
-"docs": [
-  {
-      "_id": "5f60e35096c53b1fb52b980e",
-      "categories": [],
-      "date_added": 1599983562,
-      "date_published": 1600184411,
-      "events": [],
-      "featured": false,
-      "featured_image": "https://cdn.arstechnica.net/wp-content/uploads/2020/09/tropics-800x505.jpg",
-      "id": "",
-      "imported_date": "2020-09-13T07:52:42.498Z",
-      "launches": [],
-      "ll": [],
-      "news_site": "arstechnica",
-      "news_site_long": "Arstechnica",
-      "published_date": "2020-09-15T15:40:11.000Z",
-      "tags": [],
-      "title": "Hurricane Sally will bring devastating floods to the Southern United States",
-      "url": "https://arstechnica.com/science/2020/09/hurricane-sally-will-bring-devastating-floods-to-the-southern-united-states/"
-  },
-
-```
 ### Celestial Bodies Index Endpoint
 ``` GET 'https://moon-back-end.herokuapp.com/api/v1/celestial_bodies'```
 
@@ -250,5 +222,36 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
   "name": "Debussy"
 }
 ```
+
+### Most Recent Space News Endpoint
+```GET ‘https://moon-back-end.herokuapp.com/api/v1/news’```
+
+Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com/api/v1/news’```
+
+```json
+{
+"docs": [
+  {
+      "_id": "5f60e35096c53b1fb52b980e",
+      "categories": [],
+      "date_added": 1599983562,
+      "date_published": 1600184411,
+      "events": [],
+      "featured": false,
+      "featured_image": "https://cdn.arstechnica.net/wp-content/uploads/2020/09/tropics-800x505.jpg",
+      "id": "",
+      "imported_date": "2020-09-13T07:52:42.498Z",
+      "launches": [],
+      "ll": [],
+      "news_site": "arstechnica",
+      "news_site_long": "Arstechnica",
+      "published_date": "2020-09-15T15:40:11.000Z",
+      "tags": [],
+      "title": "Hurricane Sally will bring devastating floods to the Southern United States",
+      "url": "https://arstechnica.com/science/2020/09/hurricane-sally-will-bring-devastating-floods-to-the-southern-united-states/"
+  },
+
+```
+
 
 
