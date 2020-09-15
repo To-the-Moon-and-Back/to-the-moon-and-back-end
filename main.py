@@ -1,5 +1,6 @@
-from flask import Blueprint, Flask, request, jsonify
+from flask import Blueprint, Flask, jsonify
 from models import CelestialBodies, Landmark, User, Passenger
+import requests
 
 main  = Blueprint('main', __name__)
 @main.route('/')
