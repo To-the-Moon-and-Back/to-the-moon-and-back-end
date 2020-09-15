@@ -33,3 +33,21 @@ def test_it_can_return_one_celestial_body(app):
   assert (data['planet_year']) == mercury.planet_year
   assert (data['travel']) == mercury.travel_time()
 
+def test_it_returns_sad_path_when_id_does_not_exist(app):
+  mercury = CelestialBodies(name='Mercury',
+                    image='https://cdn.mos.cms.futurecdn.net/GA4grWEsUYUqH58cDbRBw8.jpg',
+                    celestial_body_type='Planet',
+                    gravity=0.37,
+                    planet_day=58.65,
+                    planet_year=87.96)
+  db.session.add(mercury)
+  db.session.commit()
+
+  client = app.test_client()
+  resp = client.get('/api/v1/celestial_bodies/4')
+  data = json.loads(resp.data.decode())
+  assert resp.status_code == 404
+  assert (data['errors']) == 'No object found with id: 4.'
+
+
+
