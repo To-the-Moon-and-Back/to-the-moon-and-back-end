@@ -234,4 +234,21 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
   ]
 }
 ```
+### Landmark Show Endpoint 
+
+```GET ‘https://moon-back-end.herokuapp.com/api/v1/landmarks/(id)’```
+
+Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com/api/v1/landmarks/9’```
+
+```json
+{
+  "celestial_body_id": 1,
+  "description": "Named after the French composer, this crater, along with a similar one named Hakusai, are prominent enough to be detected from Earth using radio telescopes. It has a very noticeable ray pattern stretching out from the impact center, which indicates that it's relatively new. It was one of the first things photographed by the MESSENGER probe, sent to orbit the planet from 2011 to 2015.",
+  "id": 9,
+  "image": "https://live.staticflickr.com/6170/6176086738_3a98b804a4_b.jpg",
+  "landmark_type": "Crater",
+  "name": "Debussy"
+}
+```
+
 
