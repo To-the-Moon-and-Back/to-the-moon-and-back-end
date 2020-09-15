@@ -72,63 +72,72 @@ def db_seed():
                      celestial_body_type='Planet',
                      gravity=0.37,
                      planet_day=58.65,
-                     planet_year=87.96)
+                     planet_year=87.96, 
+                     background_image='https://www.howitworksdaily.com/wp-content/uploads/2138184.jpg')
 
     venus = CelestialBodies(name='Venus',
                      image="https://static.scientificamerican.com/sciam/cache/file/F7E0BB0E-3F76-4AF5-92AC0951C2976728_source.jpg?w=590&h=800&DFEBF998-B3D7-484E-B66A7290DF06386E",
                      celestial_body_type='Planet',
                      gravity=0.90,
                      planet_day=243.02,
-                     planet_year=224.70)
+                     planet_year=224.70, 
+                     background_image='https://media.wired.com/photos/5932ec76d80dd005b42b0a0e/191:100/pass/VENUS_HQ_MOSAIC_enhanced_cropped.png')
 
     mars = CelestialBodies(name='Mars',
                      image='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSY5oCXASYgKXI1MFGmRbgs9WmSnULsnOe_fg&usqp=CAU',
                      celestial_body_type='Planet',
                      gravity=0.38,
                      planet_day=1.02,
-                     planet_year=686.98)
+                     planet_year=686.98, 
+                     background_image='https://www.nasa.gov/centers/jpl/images/content/578708main_pia14507.jpg ')
 
     jupiter = CelestialBodies(name='Jupiter',
                      image='https://3.bp.blogspot.com/-JzB2ruOjBOs/WJy8tR_tJSI/AAAAAAAABdA/26gANOQ4Y4IZyMnEGS2L8X-dvhVhGL0ZQCLcB/s1600/jupiter_HD.jpg',
                      celestial_body_type='Planet',
                      gravity=2.53,
                      planet_day=0.41,
-                     planet_year=4332.59)
+                     planet_year=4332.59, 
+                     background_image='https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA21970_hires.jpg')
 
     saturn = CelestialBodies(name='Saturn',
                      image='https://solarsystem.nasa.gov/system/resources/list_images/2490_hubblesaturn_320.png',
                      celestial_body_type='Planet',
                      gravity=1.06,
                      planet_day=0.44,
-                     planet_year=10759.22)
+                     planet_year=10759.22,
+                     background_image='https://solarsystem.nasa.gov/system/news_items/main_images/712_PIA22766_hires.jpg')
 
     uranus = CelestialBodies(name='Uranus',
                      image='https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia18182-uranus-voyager1.png',
                      celestial_body_type='Planet',
                      gravity=0.90,
                      planet_day=0.72,
-                     planet_year=30685.40)
+                     planet_year=30685.40,
+                     background_image='https://api.time.com/wp-content/uploads/2017/10/uranus_nasa.jpg?quality=85&w=1200&h=628&crop=1')
 
     neptune = CelestialBodies(name='Neptune',
                      image='https://media.wired.com/photos/5d04045bde1abfe4e801d054/191:100/w_2292,h_1200,c_limit/Science-Neptune-FA-PIA01492_orig.jpg',
                      celestial_body_type='Planet',
                      gravity=1.14,
                      planet_day=0.67,
-                     planet_year=60189.00)
+                     planet_year=60189.00,
+                     background_image='https://eos.org/wp-content/uploads/2018/12/neptune-rise-crescent-voyager-2.jpg')
 
     moon = CelestialBodies(name='Moon',
                      image='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSA0QNeR2YGmCWvRtZqsYN9Ft44WxYJEArbtw&usqp=CAU',
                      celestial_body_type='Moon',
                      gravity=0.16,
                      planet_day=27.32,
-                     planet_year=None)
+                     planet_year=None,
+                     background_image='https://i.pinimg.com/originals/aa/8b/f2/aa8bf218bcff4ffd81d1b60db59e731d.jpg')
 
     sun = CelestialBodies(name='Sun',
                      image='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkKZ8nFulIMZAK8MKI8kzvsfGnaa3YlqMMRA&usqp=CAU',
                      celestial_body_type='Star',
                      gravity=27.95,
                      planet_day=25.38,
-                     planet_year=None)
+                     planet_year=None,
+                     background_image='https://cdn.wccftech.com/wp-content/uploads/2016/12/PE_Still.jpg')
 
     db.session.add(mercury)
     db.session.add(venus)
