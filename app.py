@@ -16,6 +16,8 @@ def create_app():
 
 app = create_app()
 
+from models import CelestialBodies, Landmark
+
 # @app.route('/')
 # def hello():
 #     return jsonify({'message': "App is running"})
@@ -292,6 +294,66 @@ def seed_landmark():
                              description="The two moons of Mars are tiny - Phobos is less than 15 miles long, with Deimos being less than 10. They are still visible from the Martian surface, however, thanks to orbiting much closer to the planet. They are named after twin sons of the Greek god Ares, who is the analogue to the Roman god Mars. Though it is not known for certain, the most likely scenario is that Mars captured these moons from the asteroid belt.",
                              celestial_body_id=3)
 
+    great_red_spot = Landmark(name="Great Red Spot",
+                              image="https://cdn.mos.cms.futurecdn.net/93QqMnmyqaDQ4mDdrER4rQ-1024-80.jpg.webp",
+                              landmark_type="Atmosphere",
+                              description="The clouds of Jupiter swirl constantly through its atmosphere, easily reaching speeds of 225 miles per hour. Most prominent among the clouds however, is the Great Red Spot, a large and persistent storm south of the planet's equator. It has been observed in the Jovian atmosphere since at least the 17th century, and is larger than the size of the Earth. That said, the storm has been observed getting smaller in recent years.",
+                              celestial_body_id=4)
+
+    ganymede = Landmark(name="Ganymede",
+                        image="https://upload.wikimedia.org/wikipedia/commons/f/f2/Ganymede_g1_true-edit1.jpg",
+                        landmark_type="Moon",
+                        description="Ganymede is the largest moon in the entire Solar System, and is, indeed, even larger than the planet Mercury. The four largest moons of Jupiter are known as the Galilean moons, because they were discovered by Gailileo Galilei, and were the first celestial objects that were seen to be rotating around another planet. Ganymede is the only moon to have a magnetic field, though its magnetosphere is subsumed within Jupiter's much larger one.",
+                        celestial_body_id=4)
+
+    callisto = Landmark(name="Callisto",
+                        image="https://amazingspace.org/uploads/resource_image/image/88/ff_jupiters_moon_callisto_lg.png",
+                        landmark_type="Moon",
+                        description="Callisto is the most distant of the four Galilean moons, and the second largest. Like the others, it is named after a mythological lover of Zeus, Jupiter's Greek equivalent. These four moons consist of 99.997% of all the mass in the Jovian system. Callisto is notable for having perhaps the oldest and most pockmarked surface in the entire Solar System - lacking volcanism or plate tectonics, the features of its surface are entirely created by craters.",
+                        celestial_body_id=4)
+
+    io = Landmark(name="Io",
+                  image="https://i.pinimg.com/originals/86/e0/ab/86e0abdefac8a7bd765127ad81318326.jpg",
+                  landmark_type="Moon",
+                  description="Io is the closest of the four Galilean moons to Jupiter, though it is not the closest to the planet - there are four much smaller ones that orbit even closer, known as the Amalthean group. The proximity to Jupiter, however, has made the moon intensely volcanic - it is, in fact, the most volcanically active object within the solar system, even moreso than Venus.",
+                  celestial_body_id=4)
+
+    europa = Landmark(name="Europa",
+                      image="https://i.insider.com/54d010cc6bb3f7a12d1b7745?width=1100&format=jpeg&auto=webp",
+                      landmark_type="Moon",
+                      description="Made famous by Stanley Kubrick's 2001: A Space Odyssey, Europa is notable for evidence that underneath its icy exterior there may lay a fully liquid water ocean, heated by the tides caused from the orbital resonance between it, Jupiter, Io and Ganymede. This makes it one of the most sought after places to further analyze in the search for biological life forms outside of Earth.",
+                      celestial_body_id=4)
+
+    saturn_rings = Landmark(name="Rings",
+                            image="https://d2r55xnwy6nx47.cloudfront.net/uploads/2019/11/SaturnRings_Lede_Fullwidth.jpg",
+                            landmark_type="Structure",
+                            description="Easily the most defining attribute of Saturn is its extensive ring system. While all of the giant planets of the system have some sort of ring structure, Saturn's is by far the most prominent. Going from roughly 4000 miles above the equator to fifty thousand miles out, the rings are remarkably thin - less than a mile thick - and made almost completely out of ice.",
+                            celestial_body_id=5)
+
+    polar_storms = Landmark(name="Polar Storms",
+                            image="https://www.nasa.gov/sites/default/files/images/744808main_pia14944-full_full.jpg",
+                            landmark_type="Atmosphere",
+                            description="Both the north and south pole of Saturn are the center of some long lasting storms with some curious features. A large hexagon shaped storm, eighteen thousand miles wide spins around the North Pole of Saturn at roughly 200 miles per hour. At the South Pole, a hurricane like vortex - with an eyewall formation never seen outside our planet - is roughly the same size of Earth and has winds up to 340 miles per hour.",
+                            celestial_body_id=5)
+
+    titan = Landmark(name="Titan",
+                     image="https://sos.noaa.gov/ftp_mirror/astronomy/titan/color/media/thumbnail_big.jpg",
+                     landmark_type="Moon",
+                     description="The largest moon around Saturn and the second largest moon in the entire Solar System behind only Ganymede, Titan is unique among all satellites in that it has a full atmosphere covering it. Indeed, until the Cassini-Huygens probe began investigating it in the early 2000s, much underneath the atmosphere remained a mystery. However, underneath the clouds lies the only other known location of liquid seas - though they're of hydrocarbons instead of water.",
+                     celestial_body_id=5)
+
+    mimas = Landmark(name="Mimas",
+                     image="https://apod.nasa.gov/apod/image/0905/mimas_cassini.jpg",
+                     landmark_type="Moon",
+                     description="Mimas is the closest and smallest of Saturn's major moons - though there are over 80 of them, most of the mass is contained in 7 - and of those, 96% is in Titan. Mimas has a large crater called Herschel, with a diameter a third of the entire moon, and which gives it a more than passing resemblance to the Death Star of Star Wars fame.",
+                     celestial_body_id=5)
+
+    iapetus = Landmark(name="Iapetus",
+                       image="https://skyandtelescope.org/wp-content/uploads/Iapetus_two_sides.jpg",
+                       landmark_type="Moon",
+                       description="Third largest and furthest out of the major moons of Saturn, Iapetus has a couple of striking features of note. First is the equatorial ridge that runs most of the way around the moon, giving it a sort of walnut shape. The other is that it has two distinctive sides - one a bright, reflective white, and the other a dark reddish-brown, which causes it to be more visible from one side of Saturn than the other.",
+                       celestial_body_id=5)
+
     db.session.add(solar_core)
     db.session.add(photosphere)
     db.session.add(corona)
@@ -316,5 +378,15 @@ def seed_landmark():
     db.session.add(borealis)
     db.session.add(hellas)
     db.session.add(phobos_deimos)
+    db.session.add(great_red_spot)
+    db.session.add(ganymede)
+    db.session.add(callisto)
+    db.session.add(io)
+    db.session.add(europa)
+    db.session.add(saturn_rings)
+    db.session.add(polar_storms)
+    db.session.add(titan)
+    db.session.add(mimas)
+    db.session.add(iapetus)
     db.session.commit()
     print('Landmarks seeded!')
