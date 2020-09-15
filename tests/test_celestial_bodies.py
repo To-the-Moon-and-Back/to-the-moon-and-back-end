@@ -37,6 +37,7 @@ def test_it_can_return_all_celestial_bodies(app):
   assert len(data['data']) == 2
   assert (data['data'][0]['name']) == 'Mercury'
   assert (data['data'][0]['celestial_body_type']) == mercury.celestial_body_type
+  assert (data['data'][0]['background_image']) == mercury.background_image
   assert (data['data'][0]['image']) == mercury.image
   assert (data['data'][0]['gravity']) == mercury.gravity
   assert (data['data'][0]['planet_day']) == mercury.planet_day
