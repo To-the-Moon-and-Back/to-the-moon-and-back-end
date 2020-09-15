@@ -10,7 +10,10 @@ def hello():
 def get_bodies():
     try:
         bodies = CelestialBodies.query.all()
-        return jsonify({'data': [e.serialize() for e in bodies]})
+        if not bodies:
+          return jsonify({'errors': 'No celestial bodies found.'}), 404
+        else:
+          return jsonify({'data': [e.serialize() for e in bodies]})       
     except Exception as e:
         return(str(e))
 

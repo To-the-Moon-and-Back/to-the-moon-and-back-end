@@ -41,3 +41,10 @@ def test_it_can_return_all_celestial_bodies(app):
   assert (data['data'][0]['planet_year']) == mercury.planet_year
   assert (data['data'][0]['travel']) == mercury.travel_time()
 
+def test_if_returns_404_and_sad_path_when_no_celestial_bodies_exist(app):
+  client = app.test_client()
+  resp = client.get('/api/v1/celestial_bodies')
+  data = json.loads(resp.data.decode())
+  # assert resp.status_code == 404
+  assert (data['errors']) == 'No celestial bodies found.'
+
