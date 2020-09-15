@@ -419,6 +419,7 @@ def seed_landmark():
     db.session.add(maat)
     db.session.add(sea_tranquility)
     db.session.add(tycho)
+    db.session.add(aitken)
     db.session.add(oceanus)
     db.session.add(orientale)
     db.session.add(olympus)
