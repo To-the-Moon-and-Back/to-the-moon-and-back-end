@@ -51,6 +51,9 @@ def get_landmarks(id):
 def get_landmark(id):
     try:
         landmark = Landmark.query.get(id)
-        return jsonify(landmark.serialize())
+        if landmark is not None:
+          return jsonify(landmark.serialize())
+        else:
+          return jsonify({'errors': f'No landmark found with id: {id}.'}), 404  
     except Exception as e:
         return(str(e))
