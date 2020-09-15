@@ -33,3 +33,22 @@ Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com
   },...
 
 ```
+```GET ‘https://moon-back-end.herokuapp.com/api/v1/celestial_bodies/(id)’```
+
+Example response for this request: ```GET ‘https://moon-back-end.herokuapp.com/api/v1/celestial_bodies/9’```
+
+```json
+{
+"celestial_body_type": "Star",
+"gravity": 27.95,
+"id": 9,
+"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkKZ8nFulIMZAK8MKI8kzvsfGnaa3YlqMMRA&usqp=CAU",
+"name": "Sun",
+"planet_day": 25.38,
+"planet_year": null,
+"travel": {
+"distance": 93464281.86764629,
+"travel_time": 3766.29117777427
+}
+}
+```
