@@ -16,6 +16,8 @@ def create_app():
 
 app = create_app()
 
+from models import CelestialBodies, Landmark
+
 # @app.route('/')
 # def hello():
 #     return jsonify({'message': "App is running"})
