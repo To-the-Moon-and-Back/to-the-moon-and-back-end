@@ -20,19 +20,21 @@ class CelestialBodies(db.Model):
     gravity = db.Column(db.Float())
     planet_day = db.Column(db.Float())
     planet_year = db.Column(db.Float())
+    background_image = db.Column(db.String())
     landmark = db.relationship('Landmark', backref='celestial_bodies',
         lazy=True)
     user = db.relationship('User', secondary=voyages,
         back_populates='celestial_bodies')
 
     def __init__(self, name, image, celestial_body_type, gravity, planet_day,
-        planet_year):
+        planet_year, background_image):
       self.name = name
       self.image = image
       self.celestial_body_type = celestial_body_type
       self.gravity = gravity
       self.planet_day = planet_day
       self.planet_year = planet_year
+      self.background_image = background_image
 
     def __repr__(self):
           return '<id {}>'.format(self.id)
@@ -46,7 +48,8 @@ class CelestialBodies(db.Model):
         'gravity': self.gravity,
         'planet_day': self.planet_day,
         'planet_year': self.planet_year,
-        'travel': self.travel_time()
+        'travel': self.travel_time(),
+        'background_image': self.background_image
       }
 
     def travel_time(self):
